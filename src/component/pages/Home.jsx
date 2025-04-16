@@ -1,10 +1,12 @@
 import React, { useEffect, useRef, useState } from 'react'
-import {motion} from 'motion/react'
+import { motion } from "framer-motion";
 import { FaArrowRightLong } from "react-icons/fa6";
 import Navbar from '../Navbar';
 import { Link } from 'react-router-dom';
 import ProjectCard from '../ui/ProjectCard';
+
 function Home() {
+
     const [love,setLove] = useState("Website")
     const containerRef  = useRef(null)
     const targetRef = useRef(null)
@@ -167,7 +169,14 @@ function Home() {
         </div>
         </div>
         <div ref={container2Ref} className='text-gray-900 text-3xl font-bold p-4 flex justify-center items-center sticky top-0   h-screen bg-[#F2F2F4]' ><p>White</p></div>
-        <div className='text-white text-3xl font-bold p-4 flex justify-center items-center sticky top-0   h-screen bg-[#86EFAC]' ><p>Instagram and LinkedIn</p></div>
+        <div className='text-white text-3xl font-bold p-4 flex justify-center items-center outline-offset-0 outline-8 outline-green-400  rounded-t-[25%] sticky top-0   h-auto bg-[#86EFAC]' >
+
+                <div className=' w-full flex flex-col justify-center items-center p-6 '>
+                    <div className="flex justify-center items-center w-full "><a className="w-full text-shadow text-5xl md:text-8xl font-semibold text-center text-black" href="/">LINKEDIN</a></div>
+                    <div className='flex justify-center items-center w-full'><a className=' w-full  text-shadow text-5xl md:text-8xl  font-semibold text-center text-black' href='/'>INSTAGRAM</a></div>
+                </div>
+
+        </div>
         </div>
     </>
   )
