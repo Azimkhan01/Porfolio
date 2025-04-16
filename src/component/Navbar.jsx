@@ -32,8 +32,8 @@ function Navbar({targetRef,isIntersecting,showNav,setShowNav}) {
         
         
 
-        <nav className={` ${showNav ? 'translate-x-0 opacity-100' : '-translate-x-full opacity-0 ' } transition-all ease-in-out duration-300 flex flex-col md:hidden w-full h-screen z-50 absolute top-0 bg-green-400`} >
-                  <div className='w-full p-4 flex justify-between border-b-2'>
+        <nav className={` ${showNav ? 'translate-x-0 opacity-100' : '-translate-x-full opacity-0 ' } transition-all ease-in-out duration-300 flex flex-col md:hidden w-full h-screen z-50 fixed top-0 bg-green-400`} >
+                  <div className='w-full p-4 flex justify-between border-b-1'>
                     <div > 
                         <h1 className='text-3xl'>Navigation</h1>
                     </div>

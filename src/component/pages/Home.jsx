@@ -18,7 +18,7 @@ function Home() {
         },
         {
             projectName:"HomeQuest",
-            description:"Real Estate website for listing property and agent appointment aloting them our property for faster progess."
+            description:"Real Estate website for listing property and agent appointment aloting them our property for faster progress."
         }
     ]
     useEffect(() => {
@@ -103,7 +103,7 @@ function Home() {
 
         </div>
         <div ref={containerRef} className='text-white  text-3xl font-bold p-4 flex justify-center   sticky top-0   h-screen bg-[#161719]' >
-           <div className='flex flex-col mt-[10%] gap-10 md:gap-0  w-5/6'>
+           <div className='flex flex-col mt-[5%] gap-10 md:gap-0  w-5/6'>
 
            <div className='flex w-full h-1/5 '>
                 <div className='w-1/2 flex flex-col gap-1  '>
@@ -118,13 +118,54 @@ function Home() {
             <div className='flex flex-col gap-5 md:gap-4'>
                 {
                     pn.map((data,index)=>{
-                        return <ProjectCard no={index+1} projectName={data.projectName} description={data.description}  />
+                        return <ProjectCard key={index} no={index+1} projectName={data.projectName} description={data.description}  />
                     })
                 }
             </div>
            </div>
         </div>
-        <div className='text-white text-3xl font-bold p-4 flex justify-center items-center sticky  top-0  h-screen bg-[#0F1012]' ><p>Black</p></div>
+        <div className='text-white text-3xl font-bold p-4 flex flex-col justify-center items-start md:items-center  sticky  top-0  h-screen bg-[#0F1012]' >
+            <div className=' w-full md:w-5/6 flex flex-col justify-center items-center h-2/3 md:h-2/6 '>
+                <div className='flex w-full justify-center gap-2 md:gap-0'>
+                    <p className=' text-xl md:text-lg flex justify-center items-center'>🎉</p>
+                    <p className='text-green-300'>SUPER POWER</p>
+                    <p className=' text-xl md:text-lg flex justify-center items-center'>🎉</p>
+                </div>
+                <div>
+                    <p className='text-sm text-gray-300 font-normal'>Which i have</p>
+                </div>
+                <div className='w-full mt-10 flex justify-center items-center'>
+                    <p className=' text-2xl md:text-4xl font-normal text-center'>Turning ideas into functional, user-friendly web experiences with a blend of logic, creativity, and innovation</p>
+                </div>
+                
+            </div>
+        <div className='w-full overflow-x-hidden  md:mt-10'>
+                <motion.div initial={{x:1600}} animate={{x:-3600}} transition={{duration:25,repeat:Infinity, repeatType:"loop" ,ease:"linear"}}  className='p-4 w-full flex flex-row  items-center flex-nowrap gap-20  md:gap-30' >
+                    <img className=' h-12 md:h-14' src='/skills/html.svg' />
+                    <img className=' h-12 md:h-14' src='/skills/css.svg' />
+                    <img className=' h-12 md:h-14' src='/skills/js.svg' />
+                    <img className=' h-12 md:h-14' src='/skills/figma.svg' />
+                    <img className=' h-12 md:h-14' src='/skills/express.svg' />
+                    <img className=' h-12 md:h-14' src='/skills/next.svg' />
+                    <img className=' h-12 md:h-14' src='/skills/node.svg' />
+                    <img className=' h-12 md:h-14' src='/skills/react.svg' />
+                    <img className=' h-12 md:h-14' src='/skills/mongo.svg' />
+                    <img className=' h-12 md:h-14' src='/skills/postgresql.svg' />
+                    <img className=' h-12 md:h-14' src='/skills/tailwind.svg' />
+                    <img className=' h-12 md:h-14' src='/skills/html.svg' />
+                    <img className=' h-12 md:h-14' src='/skills/css.svg' />
+                    <img className=' h-12 md:h-14' src='/skills/js.svg' />
+                    <img className=' h-12 md:h-14' src='/skills/figma.svg' />
+                    <img className=' h-12 md:h-14' src='/skills/express.svg' />
+                    <img className=' h-12 md:h-14' src='/skills/next.svg' />
+                    <img className=' h-12 md:h-14' src='/skills/node.svg' />
+                    <img className=' h-12 md:h-14' src='/skills/react.svg' />
+                    <img className=' h-12 md:h-14' src='/skills/mongo.svg' />
+                    <img className=' h-12 md:h-14' src='/skills/postgresql.svg' />
+                    <img className=' h-12 md:h-14' src='/skills/tailwind.svg' />
+                </motion.div>
+        </div>
+        </div>
         <div ref={container2Ref} className='text-gray-900 text-3xl font-bold p-4 flex justify-center items-center sticky top-0   h-screen bg-[#F2F2F4]' ><p>White</p></div>
         <div className='text-white text-3xl font-bold p-4 flex justify-center items-center sticky top-0   h-screen bg-[#86EFAC]' ><p>Instagram and LinkedIn</p></div>
         </div>
