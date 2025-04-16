@@ -81,7 +81,7 @@ function Home() {
             
             <div className=' w-full md:w-1/2'>
                 <div>
-                <img src='/public/self-Bsv3AQWc.svg' />
+                <img src='/self-Bsv3AQWc.svg' />
                 </div>    
             </div>
 
@@ -103,19 +103,19 @@ function Home() {
 
         </div>
         <div ref={containerRef} className='text-white  text-3xl font-bold p-4 flex justify-center   sticky top-0   h-screen bg-[#161719]' >
-           <div className='flex flex-col mt-[10%]  w-5/6'>
+           <div className='flex flex-col mt-[10%] gap-10 md:gap-0  w-5/6'>
 
-           <div className='flex w-full h-1/5'>
+           <div className='flex w-full h-1/5 '>
                 <div className='w-1/2 flex flex-col gap-1  '>
-                    <h1 className='text-green-500 text-4xl font-medium'>FEATURED PROJECTS</h1>
-                    <p className='text-gray text-2xl font-thin'>Selected Works</p>
+                    <h1 className='text-green-500 text-2xl md:text-4xl font-medium'>FEATURED PROJECTS</h1>
+                    <p className='text-gray text-lg md:text-2xl font-thin'>Selected Works</p>
                 </div>
                 
                 <div className='flex w-1/2 justify-center items-center p-6'>
-                    <Link  to={'/project'} className='flex justify-center  items-center gap-2  font-thin text-lg hover:text-green-400 transition-all ease-linear duration-150 '><span className='flex justify-center items-center  font-thin text-lg hover:text-green-400 transition-all ease-linear duration-150 hover:underline underline-offset-6' >See All Projects</span> <FaArrowRightLong/> </Link>
+                    <Link  to={'/project'} className='flex justify-center  items-center gap-2  font-thin text-lg hover:text-green-400 transition-all ease-linear duration-150 '><span className=' w-full flex justify-center items-center  font-thin text-sm md:text-lg hover:text-green-400 transition-all ease-linear duration-150 hover:underline underline-offset-6' >See Projects</span> <FaArrowRightLong/> </Link>
                 </div>
             </div>
-            <div className='flex flex-col gap-4'>
+            <div className='flex flex-col gap-5 md:gap-4'>
                 {
                     pn.map((data,index)=>{
                         return <ProjectCard no={index+1} projectName={data.projectName} description={data.description}  />
