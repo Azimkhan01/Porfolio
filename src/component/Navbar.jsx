@@ -8,13 +8,13 @@ import { RxCross2 } from "react-icons/rx";
 function Navbar({targetRef,isIntersecting,showNav,setShowNav}) {
   return (
     <>
-        <nav ref={targetRef}   className={`  z-2 backdrop-blur-2xl fixed top-0 p-4 w-full flex justify-between md:justify-center items-center`}>
+        <nav ref={targetRef}   className={`  z-2 backdrop-blur-sm fixed top-0 p-4 w-full flex justify-between md:justify-center items-center`}>
             <div className=' w-full md:w-1/2 flex justify-between' >
                 <div className=' hidden md:flex justify-evenly w-3/6'> 
-                    <Link path={'/'} className={`${isIntersecting ? 'text-green-400' : 'text-black' }  font-semibold`}>Home</Link>
-                    <Link path={'/'} className={`${isIntersecting ? 'text-green-400' : 'text-black' }  font-semibold`}>Project</Link>
-                    <Link path={'/'} className={`${isIntersecting ? 'text-green-400' : 'text-black' }  font-semibold`}>About</Link>
-                    <Link path={'/'} className={`${isIntersecting ? 'text-green-400' : 'text-black' }  font-semibold`}>Contact</Link>
+                    <Link to={'/'} className={`${isIntersecting ? 'text-green-400' : 'text-black' }  font-semibold`}>Home</Link>
+                    <Link to={'/project'} className={`${isIntersecting ? 'text-green-400' : 'text-black' }  font-semibold`}>Project</Link>
+                    <Link to={'/'} className={`${isIntersecting ? 'text-green-400' : 'text-black' }  font-semibold`}>About</Link>
+                    <Link to={'/'} className={`${isIntersecting ? 'text-green-400' : 'text-black' }  font-semibold`}>Contact</Link>
                 </div>
                 <div className='flex gap-5 '>
                     <div className='bg-green-400 active:bg-white  hover:bg-white transition-all ease-linear duration-100 flex justify-center items-center p-2 rounded shadow'>
@@ -42,10 +42,10 @@ function Navbar({targetRef,isIntersecting,showNav,setShowNav}) {
                     </div>
                   </div>
                   <div className='flex flex-col justify-center items-center p-4' >
-                        <Link path={'/'} className={`${isIntersecting ? 'text-white' : 'text-black' }  font-semibold border-b-1 w-full px-4 py-2`}> 01 Home</Link>
-                        <Link path={'/'} className={`${isIntersecting ? 'text-white' : 'text-black' }  font-semibold border-b-1 w-full px-4 py-2`}> 02 Project</Link>
-                        <Link path={'/'} className={`${isIntersecting ? 'text-white' : 'text-black' }  font-semibold border-b-1 w-full px-4 py-2`}> 03 About</Link>
-                        <Link path={'/'} className={`${isIntersecting ? 'text-white' : 'text-black' }  font-semibold border-b-1 w-full px-4 py-2`}> 04 Contact</Link>
+                        <Link to={'/'} className={`${isIntersecting ? 'text-white' : 'text-black' }  font-semibold border-b-1 w-full px-4 py-2`}> 01 Home</Link>
+                        <Link to={'/project'} className={`${isIntersecting ? 'text-white' : 'text-black' }  font-semibold border-b-1 w-full px-4 py-2`}> 02 Project</Link>
+                        <Link to={'/'} className={`${isIntersecting ? 'text-white' : 'text-black' }  font-semibold border-b-1 w-full px-4 py-2`}> 03 About</Link>
+                        <Link to={'/'} className={`${isIntersecting ? 'text-white' : 'text-black' }  font-semibold border-b-1 w-full px-4 py-2`}> 04 Contact</Link>
                   </div>
         </nav> 
     </>

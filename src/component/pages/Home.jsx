@@ -4,9 +4,40 @@ import { FaArrowRightLong } from "react-icons/fa6";
 import Navbar from '../Navbar';
 import { Link } from 'react-router-dom';
 import ProjectCard from '../ui/ProjectCard';
-
+import ExperienceCard from '../ui/ExperienceCard';
+import { GiPolarStar } from "react-icons/gi";
+import InstaLinkedIn from '../ui/InstaLinkedIn';
 function Home() {
 
+    const skill = [
+        {
+            Role:"Full Stack Developer",
+            companyName:"Prodigy Infotech",
+            date:"Aug-Sep 2024",
+            type:"Internship",
+            description:"Completed a full stack development internship at Prodigy Infotech, where I built a chatting app with Employee management and authentication and a local e-commerce website. Gained hands-on experience with full-stack development, authentication, and real-world project implementation.",
+            skill:["HTML/CSS/JS","Express","MongoDB"],
+            img:"node.svg"
+        },
+        {
+            Role:"Web Developer",
+            companyName:"CodeTech IT Solution",
+            date:"Aug-Oct 2024",
+            type:"Internship",
+            description:"Completed a web development internship at CodeTech IT Solution, where I built a Todo List App and Ecommerce Component in a  website. Gained hands-on experience with full-stack development, and real-world project implementation.",
+            skill:["HTML/CSS/JS","Express","MongoDB"],
+            img:"js.svg"
+        },
+        {
+            Role:"Braniwave Matrix Solution",
+            companyName:"CodeTech IT Solution",
+            date:"Sep-Feb 2024-25",
+            type:"Internship",
+            description:"Completed a web development internship at Brainwave Matrix Solution, Gained hands-on experience with full-stack development, and real-world project implementation.",
+            skill:["HTML/CSs/JS","Express","MongoDB"],
+            img:"html.svg"
+        }
+    ]
     const [love,setLove] = useState("Website")
     const containerRef  = useRef(null)
     const targetRef = useRef(null)
@@ -168,15 +199,29 @@ function Home() {
                 </motion.div>
         </div>
         </div>
-        <div ref={container2Ref} className='text-gray-900 text-3xl font-bold p-4 flex justify-center items-center sticky top-0   h-screen bg-[#F2F2F4]' ><p>White</p></div>
-        <div className='text-white text-3xl font-bold p-4 flex justify-center items-center outline-offset-0 outline-8 outline-green-400  rounded-t-[25%] sticky top-0   h-auto bg-[#86EFAC]' >
-
-                <div className=' w-full flex flex-col justify-center items-center p-6 '>
-                    <div className="flex justify-center items-center w-full "><a className="w-full text-shadow text-5xl md:text-8xl font-semibold text-center text-black" href="/">LINKEDIN</a></div>
-                    <div className='flex justify-center items-center w-full'><a className=' w-full  text-shadow text-5xl md:text-8xl  font-semibold text-center text-black' href='/'>INSTAGRAM</a></div>
+        <div ref={container2Ref} className=' p-2 md:p-4 flex  justify-center   sticky top-0   h-screen bg-[#F2F2F4]' >
+            <div className=' w-full md:w-5/6 flex flex-col justify-center gap-5 md:gap-10'>
+            
+                <div className='flex items-center'>
+                <GiPolarStar className='text-green-600 text-xl md:text-2xl font-sans'/>
+                    <h1 className='text-green-600 text-3xl md:text-5xl font-sans'>Experience</h1>
                 </div>
-
+                
+                <div className='flex flex-col gap-2 md:gap-5 w-full'>
+                    {
+                        skill.map((data,i)=>{
+                            return (
+                                <ExperienceCard Role={data.Role}  companyName={data.companyName} date={data.date} type={data.type} description={data.description} skill={data.skill} img={data.img} key={i} />
+                            )
+                        })
+                    }
+                </div>
+            
+            </div>
         </div>
+       
+        <InstaLinkedIn/>
+
         </div>
     </>
   )
