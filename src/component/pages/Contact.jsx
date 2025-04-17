@@ -17,7 +17,7 @@ function Contact() {
 
     <div className=' bg-[#E8E2E2] h-screen sticky top-0 flex flex-col justify-center items-center gap-10 '>
 
-        <div className='w-1/6 bg-[#D4D4D4] rounded-full flex justify-center items-center hover:animate-pulse transition-all ease-in-out duration-200'><img className='w-6/6' src='/public/handshake.svg' alt='handShake'/></div>
+        <div className='w-1/6 bg-[#D4D4D4] rounded-full flex justify-center items-center hover:animate-pulse transition-all ease-in-out duration-200'><img className='w-6/6' src='/handshake.svg' alt='handShake'/></div>
         <div><h1 className='text-gray-600 text-4xl font-bold'>Tell me about your next project</h1></div>
           <div className='flex gap-3'>
             <a className='px-6 py-3 rounded-3xl text-white font-semibold text-lg hover:animate-pulse  bg-[#000000c5]' href="mailto:someone@example.com">Email me</a>
