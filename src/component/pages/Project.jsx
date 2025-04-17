@@ -1,6 +1,6 @@
 import React, { useRef, useState } from 'react'
 import Navbar from '../Navbar'
-import ProjectAlPorject from '../ui/projectAlPorject'
+import ProjectAlPorject from '../ui/ProjectAlPorject'
 import InstaLinkedIn  from '../ui/InstaLinkedIn'
 function Project() {
     const targetRef = useRef(null)
