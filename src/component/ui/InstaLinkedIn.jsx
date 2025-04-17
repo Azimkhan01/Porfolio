@@ -18,7 +18,7 @@ function InstaLinkedIn() {
                         className="flex justify-center items-center w-full ">
                             <a 
                                 className="w-full text-shadow text-5xl md:text-8xl font-semibold text-center text-black" 
-                                href="/">
+                                href="https://www.linkedin.com/in/azimuddeen-khan" target='_blank'>
                                     LINKEDIN
                             </a>
                      </motion.div>
@@ -31,7 +31,7 @@ function InstaLinkedIn() {
                         className='flex justify-center items-center w-full'>
                             <a 
                                 className=' w-full  text-shadow text-5xl md:text-8xl  font-semibold text-center text-black' 
-                                href='/'>
+                                href='https://www.instagram.com/everazim/' target='_blank'>
                                     INSTAGRAM
                             </a>
                     </motion.div>
