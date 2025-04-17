@@ -57,10 +57,7 @@ function About() {
             </motion.div>
             <motion.div initial={{x:0,y:0}} drag dragConstraints={imageConstraintRef} className=" border-8 border-white shadow rotate-60 absolute w-[200px] md:w-[300px] h-[300px] md:h-[400px] bg-center rounded-2xl bg-cover bg-[url('/about/image_42.jpg')]">
             </motion.div>
-            <motion.div initial={{x:0,y:0}}  transition={{ease:"anticipate",delay:1,duration:2}} drag dragConstraints={imageConstraintRef} className=" border-8 border-white shadow -rotate-60 absolute w-[200px] md:w-[300px] h-[300px] md:h-[400px] bg-center rounded-2xl bg-cover bg-[url('/about/image_43.jpg')]">
-            </motion.div>
-            <motion.div initial={{x:0,y:0}}  transition={{ease:"anticipate",delay:1,duration:2}} drag dragConstraints={imageConstraintRef} className=" border-8 border-white shadow rotate-180 absolute w-[200px] md:w-[300px] h-[300px] md:h-[400px] bg-center rounded-2xl bg-cover bg-[url('/about/image_41.jpg')]">
-            </motion.div>
+            
             <motion.div initial={{x:0,y:0}}  transition={{ease:"anticipate",delay:1,duration:2}} drag dragConstraints={imageConstraintRef} className=" border-8 border-white shadow rotate-0 absolute w-[200px] md:w-[300px] h-[300px] md:h-[400px] bg-center rounded-2xl bg-cover bg-[url('/about/image_3.jpg')]">
             </motion.div>
             
