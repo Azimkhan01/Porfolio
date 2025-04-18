@@ -20,14 +20,14 @@ function ProjectAlProject() {
               ]
   const projLink = 
   [
-    "/project/HomeQuest",
-    "/project/GymManagement",
-    "/project/StudentManagement",
-    "/project/dashboard",
-    "/project/ChattingApplication",
-    "/project/Ecommerce",
-    "/project/FlipkartClone",
-    "/project/TodoList",
+    {isLink:true,link:"https://github.com/Azimkhan01/HomeQuest"},
+    {isLink:true,link:"https://github.com/Azimkhan01/GYM-MANAGEMENT-SYSTEM"},
+    {isLink:true,link:"https://github.com/Azimkhan01/Class-Management"},
+    {isLink:false,link:""},
+    {isLink:true,link:"https://github.com/Azimkhan01/PRODIGY_FS_04"},
+    {isLink:true,link:"https://github.com/Azimkhan01/PRODIGY_FS_03"},
+    {isLink:true,link:"https://github.com/Azimkhan01/flipkart_html_css_js"},
+    {isLink:true,link:"https://github.com/Azimkhan01/todo_list-_react"},
   ]
 
   const container = useRef(null);
@@ -60,8 +60,8 @@ function ProjectAlProject() {
         >
           <img className="rounded-xl object-cover"  src={data} />
           
-          <div className=" bg-green-300 p-2 rounded-full absolute top-2.5 right-2.5">
-              <Link to={projLink[i]}><CgArrowTopRight className="text-xl" /></Link>
+          <div className={`${projLink[i]["isLink"] ? "" : "hidden"} bg-green-300 p-2 rounded-full absolute top-2.5 right-2.5`}>
+              <a href={projLink[i]['link']} target="_blank"><CgArrowTopRight className="text-xl" /></a>
           </div>
         </div>
       ))}

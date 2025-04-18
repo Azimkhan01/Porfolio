@@ -5,6 +5,7 @@ import { LuGithub } from "react-icons/lu";
 import { RiLinkedinLine } from "react-icons/ri";
 import { TbUserEdit } from 'react-icons/tb';
 import { RxCross2 } from "react-icons/rx";
+import DownloadResume from './ui/DownloadResume';
 function Navbar({targetRef,isIntersecting,showNav,setShowNav}) {
   return (
     <>
@@ -49,7 +50,7 @@ function Navbar({targetRef,isIntersecting,showNav,setShowNav}) {
                   </div>
         </nav> 
         <div className='z-2 backdrop-blur-xs fixed bottom-0 w-full h-2 rounded-full md:h-4 ' />
-        
+        <DownloadResume/>        
     </>
   )
 }
