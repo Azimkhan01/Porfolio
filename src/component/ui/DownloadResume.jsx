@@ -11,7 +11,7 @@ function DownloadResume() {
             <button className='text-white text-sm md:text-sm font-thin border-2 border-gray-500 rounded-lg p-2'>Download</button>
             <a href='/resume.pdf' download={"Azim_Cv.pdf"}><AiOutlineDownload className='text-white text-2xl  hover:scale-150 transition-all ease-linear duration-200' /></a>
         </div>
-        <button className={` ${isClick ? ' h-12 p-3 mb-5 rotate-45 text-white bg-black border-1 border-[gray]' : "bg-white" } h-1/2 text-2xl font-light   p-2 rounded-full flex justify-center items-center`} onClick={()=>{setIsClick(!isClick)}}><IoMdAdd/></button>
+        <button className={` ${isClick ? ' h-12 p-3 mb-5 rotate-45 text-white bg-black border-1 border-[gray]' : "bg-white" } h-1/2 text-2xl font-light   p-2 rounded-full flex justify-center items-center transition-all ease-in-out duration-300`} onClick={()=>{setIsClick(!isClick)}}><IoMdAdd/></button>
     </div>  
   )
 }

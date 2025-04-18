@@ -7,6 +7,7 @@ import ProjectCard from '../ui/ProjectCard';
 import ExperienceCard from '../ui/ExperienceCard';
 import { GiPolarStar } from "react-icons/gi";
 import InstaLinkedIn from '../ui/InstaLinkedIn';
+import gsap from "gsap";
 function Home() {
 
     const skill = [
@@ -38,7 +39,7 @@ function Home() {
             img:"html.svg"
         }
     ]
-    const [love,setLove] = useState("Website")
+    
     const containerRef  = useRef(null)
     const targetRef = useRef(null)
     const container2Ref = useRef(null)
@@ -54,40 +55,49 @@ function Home() {
             description:"Real Estate website for listing property and agent appointment aloting them our property for faster progress."
         }
     ]
-    useEffect(() => {
-       
-        window.addEventListener('scroll',()=>{
-            const rect = containerRef.current.getBoundingClientRect()
-            const rect2 = container2Ref.current.getBoundingClientRect()
-            if(rect.y == 0   )
-            {
-                setIsIntersecting(true)
-            }else{
-                setIsIntersecting(false)
-            }
+    const wordRef = useRef(null);
+    const indexRef = useRef(0); // Track index without causing re-renders
+    const intervalRef = useRef(null);    
+  const words = ["Hello", "Welcome", "React", "GSAP"]; // your word list
+    const [love, setLove] = useState(words[0]);
+    
 
-            if(rect2.y ==0)
+    useEffect(() => {
+        const animateWord = () => {
+          // Animate out
+          gsap.to(wordRef.current, {
+            y: 20,
+            opacity: 0,
+            duration: 0.4,
+            ease: "power2.inOut",
+            onComplete: () => {
+              // Update text
+              indexRef.current = (indexRef.current + 1) % words.length;
+              setLove(words[indexRef.current]);
+    
+              // Animate in
+              gsap.fromTo(
+                wordRef.current,
+                { y: -20, opacity: 0 },
                 {
-                    setIsIntersecting(false)
+                  y: 0,
+                  opacity: 1,
+                  duration: 1.2,
+                  ease: "power2.out",
                 }
-        })
-       
-    }, []);
-
-    useEffect(() => {
-        const word = ['Website', 'Api', 'Routes', 'Database'];
-        let i = 0;
+              );
+            },
+          });
+        };
     
-        const interval = setInterval(() => {
-          setLove(word[i]);
-          i = (i + 1) % word.length;  // This ensures i wraps back to 0 after reaching the last element
-        }, 2000);
+        intervalRef.current = setInterval(animateWord, 4000);
     
-        // Cleanup interval on component unmount
-        return () => clearInterval(interval);
-      }, []); // Empty dependency array ensures it runs only once
+        return () => {
+          clearInterval(intervalRef.current);
+          gsap.killTweensOf(wordRef.current); // Clean up GSAP animations
+        };
+      }, []);
       
-    useEffect(()=>{})
 
     return (
     <>
@@ -102,7 +112,7 @@ function Home() {
            <h1 style={{fontFamily:'inter,sans-serif'}} className=' text-3xl md:text-[60px]  font-semibold '>Hi,I'm Azimuddeen Khan</h1> 
             <h1 className='text-[30px] font-light' >I am Mern Stack Developer</h1>
             <h1 className='py-2 flex gap-1 justify-center items-center'>Love to build
-                 <motion.span  className='bg-green-400 py-1 px-2 rounded shadow text-white font-semibold block transition-all ease-in-out duration-150' >
+                 <motion.span ref={wordRef} className='bg-green-400 py-1 px-2 rounded shadow text-white font-semibold block transition-all ease-in-out duration-150' >
                     {love}
                 </motion.span>
             </h1>

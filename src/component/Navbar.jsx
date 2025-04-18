@@ -1,13 +1,25 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React,{useEffect} from 'react'
+import { Link,useLocation } from 'react-router-dom'
 import { GiHamburgerMenu } from "react-icons/gi";
 import { LuGithub } from "react-icons/lu";
 import { RiLinkedinLine } from "react-icons/ri";
 import { TbUserEdit } from 'react-icons/tb';
 import { RxCross2 } from "react-icons/rx";
 import DownloadResume from './ui/DownloadResume';
+
+
 function Navbar({targetRef,isIntersecting,showNav,setShowNav}) {
-  return (
+ 
+    const {pathname} = useLocation()
+    useEffect(()=>{
+        window.scrollTo({
+            top: 0,
+            left: 0,
+            behavior: "smooth",
+          });
+    },[pathname])
+
+    return (
     <>
         <nav ref={targetRef}   className={`  z-2 backdrop-blur-sm fixed top-0 p-4 w-full flex justify-between md:justify-center items-center`}>
             <div className=' w-full md:w-1/2 flex justify-between' >
