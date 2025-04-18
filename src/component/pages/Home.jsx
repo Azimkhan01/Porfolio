@@ -98,6 +98,24 @@ function Home() {
         };
       }, []);
       
+      useEffect(() => {
+        
+         window.addEventListener('scroll',()=>{
+             const rect = containerRef.current.getBoundingClientRect()
+             const rect2 = container2Ref.current.getBoundingClientRect()
+             if(rect.y == 0   )
+             {
+                 setIsIntersecting(true)
+             }else{
+                 setIsIntersecting(false)
+             }
+             if(rect2.y ==0)
+                {
+                    setIsIntersecting(false)
+                }
+            })
+           
+        }, []);
 
     return (
     <>
@@ -112,7 +130,7 @@ function Home() {
            <h1 style={{fontFamily:'inter,sans-serif'}} className=' text-3xl md:text-[60px]  font-semibold '>Hi,I'm Azimuddeen Khan</h1> 
             <h1 className='text-[30px] font-light' >I am Mern Stack Developer</h1>
             <h1 className='py-2 flex gap-1 justify-center items-center'>Love to build
-                 <motion.span ref={wordRef} className='bg-green-400 py-1 px-2 rounded shadow text-white font-semibold block transition-all ease-in-out duration-150' >
+                 <motion.span ref={wordRef} className='bg-gradient-to-l   from-green-500 to-green-300 py-1 px-2 rounded shadow text-white font-semibold block transition-all ease-in-out duration-150' >
                     {love}
                 </motion.span>
             </h1>
