@@ -8,7 +8,6 @@ ReactGA.initialize('G-VDXCWBK4XB');
 
 // Track page views
 ReactGA.send('pageview'); // Sends a pageview hit when the app starts
-console.log("Install hua Azim")
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <App />
