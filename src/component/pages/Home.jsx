@@ -10,39 +10,39 @@ import InstaLinkedIn from '../ui/InstaLinkedIn';
 import gsap from "gsap";
 function Home() {
 
-    const skill = [
-        {
-            Role:"Full Stack Developer",
-            companyName:"Prodigy Infotech",
-            date:"Aug-Sep 2024",
-            type:"Internship",
-            description:"Completed a full stack development internship at Prodigy Infotech, where I built a chatting app with Employee management and authentication and a local e-commerce website. Gained hands-on experience with full-stack development, authentication, and real-world project implementation.",
-            skill:["HTML/CSS/JS","Express","MongoDB"],
-            img:"node.svg"
-        },
-        {
-            Role:"Web Developer",
-            companyName:"CodeTech IT Solution",
-            date:"Aug-Oct 2024",
-            type:"Internship",
-            description:"Completed a web development internship at CodeTech IT Solution, where I built a Todo List App and Ecommerce Component in a  website. Gained hands-on experience with full-stack development, and real-world project implementation.",
-            skill:["HTML/CSS/JS","Express","MongoDB"],
-            img:"js.svg"
-        },
-        {
-            Role:"Braniwave Matrix Solution",
-            companyName:"CodeTech IT Solution",
-            date:"Sep-Feb 2024-25",
-            type:"Internship",
-            description:"Completed a web development internship at Brainwave Matrix Solution, Gained hands-on experience with full-stack development, and real-world project implementation.",
-            skill:["HTML/CSs/JS","Express","MongoDB"],
-            img:"html.svg"
-        }
-    ]
+    // const skill = [
+    //     {
+    //         Role:"Full Stack Developer",
+    //         companyName:"Prodigy Infotech",
+    //         date:"Aug-Sep 2024",
+    //         type:"Internship",
+    //         description:"Completed a full stack development internship at Prodigy Infotech, where I built a chatting app with Employee management and authentication and a local e-commerce website. Gained hands-on experience with full-stack development, authentication, and real-world project implementation.",
+    //         skill:["HTML/CSS/JS","Express","MongoDB"],
+    //         img:"node.svg"
+    //     },
+    //     {
+    //         Role:"Web Developer",
+    //         companyName:"CodeTech IT Solution",
+    //         date:"Aug-Oct 2024",
+    //         type:"Internship",
+    //         description:"Completed a web development internship at CodeTech IT Solution, where I built a Todo List App and Ecommerce Component in a  website. Gained hands-on experience with full-stack development, and real-world project implementation.",
+    //         skill:["HTML/CSS/JS","Express","MongoDB"],
+    //         img:"js.svg"
+    //     },
+    //     {
+    //         Role:"Braniwave Matrix Solution",
+    //         companyName:"CodeTech IT Solution",
+    //         date:"Sep-Feb 2024-25",
+    //         type:"Internship",
+    //         description:"Completed a web development internship at Brainwave Matrix Solution, Gained hands-on experience with full-stack development, and real-world project implementation.",
+    //         skill:["HTML/CSs/JS","Express","MongoDB"],
+    //         img:"html.svg"
+    //     }
+    // ]
     
     const containerRef  = useRef(null)
     const targetRef = useRef(null)
-    const container2Ref = useRef(null)
+    // const container2Ref = useRef(null)
     const [isIntersecting, setIsIntersecting] = useState(false);
     const[showNav , setShowNav] = useState(false)
     const pn = [
@@ -102,17 +102,17 @@ function Home() {
         
          window.addEventListener('scroll',()=>{
              const rect = containerRef.current.getBoundingClientRect()
-             const rect2 = container2Ref.current.getBoundingClientRect()
+            //  const rect2 = container2Ref.current.getBoundingClientRect()
              if(rect.y == 0   )
              {
                  setIsIntersecting(true)
              }else{
                  setIsIntersecting(false)
              }
-             if(rect2.y ==0)
-                {
-                    setIsIntersecting(false)
-                }
+            //  if(rect2.y ==0)
+            //     {
+            //         setIsIntersecting(false)
+            //     }
             })
            
         }, []);
@@ -227,7 +227,7 @@ function Home() {
                 </motion.div>
         </div>
         </div>
-        <div ref={container2Ref} className=' p-2 md:p-4 flex  justify-center   sticky top-0   h-screen bg-[#F2F2F4]' >
+        {/* <div ref={container2Ref} className=' p-2 md:p-4 flex  justify-center   sticky top-0   h-screen bg-[#F2F2F4]' >
             <div className=' w-full md:w-5/6 flex flex-col justify-center gap-5 md:gap-10'>
             
                 <div className='flex items-center'>
@@ -246,7 +246,7 @@ function Home() {
                 </div>
             
             </div>
-        </div>
+        </div> */}
        
         <InstaLinkedIn/>
 
