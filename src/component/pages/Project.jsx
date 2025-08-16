@@ -9,6 +9,9 @@ function Project() {
     
   return (
     <>
+    <title>Project - EverAzim</title>
+    <meta name="description" content="Explore Azimuddeen Khan’s full stack web development projects built with React, Node.js, and MongoDB. Showcasing real-world applications and modern solutions." />
+<link rel="canonical" href='/project' />
         <Navbar targetRef={targetRef} showNav={showNav} setShowNav={setShowNav} isIntersecting={isIntersecting} />
         
         <div className='h-screen flex justify-center items-center'>

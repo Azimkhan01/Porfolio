@@ -1,11 +1,9 @@
-import React, { useEffect, useRef, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { motion } from "framer-motion";
 import { FaArrowRightLong } from "react-icons/fa6";
 import Navbar from '../Navbar';
 import { Link } from 'react-router-dom';
 import ProjectCard from '../ui/ProjectCard';
-import ExperienceCard from '../ui/ExperienceCard';
-import { GiPolarStar } from "react-icons/gi";
 import InstaLinkedIn from '../ui/InstaLinkedIn';
 import gsap from "gsap";
 function Home() {
@@ -47,12 +45,19 @@ function Home() {
     const[showNav , setShowNav] = useState(false)
     const pn = [
         {
+            projectName:"Botanix Natural",
+            description:"High-quality herbal extracts, fruit extracts, and natural powders for nutraceutical, cosmetic & food industries - 100% pure & tested.",
+            link:"https://botanixnatural.com"
+        },
+        {
             projectName:"Gym Management",
-            description:"Membership management that allow to handle member send mail delete arrangement and so on."
+            description:"Membership management that allow to handle member send mail delete arrangement and so on.",
+            link:"https://gym-management-docs.vercel.app"
         },
         {
             projectName:"HomeQuest",
-            description:"Real Estate website for listing property and agent appointment aloting them our property for faster progress."
+            description:"Real Estate website for listing property and agent appointment aloting them our property for faster progress.",
+            link:"https://github.com/Azimkhan01/HomeQuest"    
         }
     ]
     const wordRef = useRef(null);
@@ -119,6 +124,7 @@ function Home() {
 
     return (
     <>
+    
         
         <Navbar targetRef={targetRef} showNav={showNav} setShowNav={setShowNav} isIntersecting={isIntersecting} />
         
@@ -142,7 +148,7 @@ function Home() {
             
             <div className=' w-full md:w-1/2'>
                 <div>
-                <img src='/self-Bsv3AQWc.svg' />
+                <img lazy src='/self-Bsv3AQWc.svg' alt='person' />
                 </div>    
             </div>
 
@@ -163,7 +169,7 @@ function Home() {
             </div>
 
         </div>
-        <div ref={containerRef} className='text-white  text-3xl font-bold p-4 flex justify-center   sticky top-0   h-screen bg-[#161719]' >
+        <div ref={containerRef} className='text-white  text-3xl font-bold p-4 flex justify-center sticky top-0 h-screen bg-[#161719]' >
            <div className='flex flex-col mt-[5%] gap-10 md:gap-0  w-5/6'>
 
            <div className='flex w-full h-1/5 '>
@@ -179,7 +185,7 @@ function Home() {
             <div className='flex flex-col gap-5 md:gap-4'>
                 {
                     pn.map((data,index)=>{
-                        return <ProjectCard key={index} no={index+1} projectName={data.projectName} description={data.description}  />
+                        return <ProjectCard key={index} no={index+1} projectName={data.projectName} description={data.description} link={data.link}  />
                     })
                 }
             </div>
@@ -202,28 +208,28 @@ function Home() {
             </div>
         <div className='w-full overflow-x-hidden  md:mt-10'>
                 <motion.div initial={{x:1600}} animate={{x:-3600}} transition={{duration:25,repeat:Infinity, repeatType:"loop" ,ease:"linear"}}  className='p-4 w-full flex flex-row  items-center flex-nowrap gap-20  md:gap-30' >
-                    <img className=' h-12 md:h-14' src='/skills/html.svg' />
-                    <img className=' h-12 md:h-14' src='/skills/css.svg' />
-                    <img className=' h-12 md:h-14' src='/skills/js.svg' />
-                    <img className=' h-12 md:h-14' src='/skills/figma.svg' />
-                    <img className=' h-12 md:h-14' src='/skills/express.svg' />
-                    <img className=' h-12 md:h-14' src='/skills/next.svg' />
-                    <img className=' h-12 md:h-14' src='/skills/node.svg' />
-                    <img className=' h-12 md:h-14' src='/skills/react.svg' />
-                    <img className=' h-12 md:h-14' src='/skills/mongo.svg' />
-                    <img className=' h-12 md:h-14' src='/skills/postgresql.svg' />
-                    <img className=' h-12 md:h-14' src='/skills/tailwind.svg' />
-                    <img className=' h-12 md:h-14' src='/skills/html.svg' />
-                    <img className=' h-12 md:h-14' src='/skills/css.svg' />
-                    <img className=' h-12 md:h-14' src='/skills/js.svg' />
-                    <img className=' h-12 md:h-14' src='/skills/figma.svg' />
-                    <img className=' h-12 md:h-14' src='/skills/express.svg' />
-                    <img className=' h-12 md:h-14' src='/skills/next.svg' />
-                    <img className=' h-12 md:h-14' src='/skills/node.svg' />
-                    <img className=' h-12 md:h-14' src='/skills/react.svg' />
-                    <img className=' h-12 md:h-14' src='/skills/mongo.svg' />
-                    <img className=' h-12 md:h-14' src='/skills/postgresql.svg' />
-                    <img className=' h-12 md:h-14' src='/skills/tailwind.svg' />
+                    <img lazy className=' h-12 md:h-14' src='/skills/html.svg' />
+                    <img lazy className=' h-12 md:h-14' src='/skills/css.svg' />
+                    <img lazy className=' h-12 md:h-14' src='/skills/js.svg' />
+                    <img lazy className=' h-12 md:h-14' src='/skills/figma.svg' />
+                    <img lazy className=' h-12 md:h-14' src='/skills/express.svg' />
+                    <img lazy className=' h-12 md:h-14' src='/skills/next.svg' />
+                    <img lazy className=' h-12 md:h-14' src='/skills/node.svg' />
+                    <img lazy className=' h-12 md:h-14' src='/skills/react.svg' />
+                    <img lazy className=' h-12 md:h-14' src='/skills/mongo.svg' />
+                    <img lazy className=' h-12 md:h-14' src='/skills/postgresql.svg' />
+                    <img lazy className=' h-12 md:h-14' src='/skills/tailwind.svg' />
+                    <img lazy className=' h-12 md:h-14' src='/skills/html.svg' />
+                    <img lazy className=' h-12 md:h-14' src='/skills/css.svg' />
+                    <img lazy className=' h-12 md:h-14' src='/skills/js.svg' />
+                    <img lazy className=' h-12 md:h-14' src='/skills/figma.svg' />
+                    <img lazy className=' h-12 md:h-14' src='/skills/express.svg' />
+                    <img lazy className=' h-12 md:h-14' src='/skills/next.svg' />
+                    <img lazy className=' h-12 md:h-14' src='/skills/node.svg' />
+                    <img lazy className=' h-12 md:h-14' src='/skills/react.svg' />
+                    <img lazy className=' h-12 md:h-14' src='/skills/mongo.svg' />
+                    <img lazy className=' h-12 md:h-14' src='/skills/postgresql.svg' />
+                    <img lazy className=' h-12 md:h-14' src='/skills/tailwind.svg' />
                 </motion.div>
         </div>
         </div>

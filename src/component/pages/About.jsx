@@ -97,6 +97,9 @@ function About() {
 
   return (
     <>
+    <title>About - EverAzim</title>
+    <meta name="description" content="Learn more about Azimuddeen Khan, a passionate Full Stack Web Developer skilled in React, Node.js, and modern web technologies. Explore my journey and expertise." />
+     <link rel="canonical" href='/about' />
       <Navbar targetRef={targetRef} showNav={showNav} setShowNav={setShowNav} isIntersecting={isIntersecting} />
 
       {/* Draggable Image Section */}

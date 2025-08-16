@@ -3,12 +3,12 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/all";
 import { CgArrowTopRight } from "react-icons/cg";
-import { Link } from "react-router-dom";
 gsap.registerPlugin(ScrollTrigger);
 
 function ProjectAlProject() {
 
   const img = [
+                "/project/botanix.png",
                 "/project/HomeQuest.png",
                 "/project/GymManagement.png",
                 "/project/StudentManagement.png",
@@ -20,6 +20,7 @@ function ProjectAlProject() {
               ]
   const projLink = 
   [
+    {isLink:true,link:"https://botanixnatural.com"},
     {isLink:true,link:"https://github.com/Azimkhan01/HomeQuest"},
     {isLink:true,link:"https://github.com/Azimkhan01/GYM-MANAGEMENT-SYSTEM"},
     {isLink:true,link:"https://github.com/Azimkhan01/Class-Management"},
@@ -58,7 +59,7 @@ function ProjectAlProject() {
           key={i}
           className="slide bg-gradient-to-r from-green-300 to-green-500 p-4 relative bg-green-100 w-5/6 md:w-1/2 flex justify-center items-center   flex-shrink-0 rounded-md"
         >
-          <img className="rounded-xl object-cover"  src={data} />
+          <img lazy alt={data} className="rounded-xl object-cover"  src={data} />
           
           <div className={`${projLink[i]["isLink"] ? "" : "hidden"} bg-green-300 p-2 rounded-full absolute top-2.5 right-2.5`}>
               <a href={projLink[i]['link']} target="_blank"><CgArrowTopRight className="text-xl" /></a>

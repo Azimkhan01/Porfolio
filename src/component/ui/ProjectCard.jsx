@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { FaArrowRightLong } from "react-icons/fa6";
 
-function ProjectCard({no,projectName,description}) {
+function ProjectCard({no,projectName,description,link}) {
   return (
     <div className='flex flex-col md:flex-row gap-3 justify-between'>
         
@@ -20,7 +20,7 @@ function ProjectCard({no,projectName,description}) {
                 <p className='text-2xl font-light hover:text-green-500 leading-7'>{description}</p>
             </div>
             <div className='w-1/3'>
-                <Link to={`/project/${projectName}`} className=' text-sm  font-thin flex justify-center items-center gap-3 hover:text-green-400' ><span className=' hover:underline underline-offset-4 '>View Porject</span> <FaArrowRightLong/> </Link>
+                <Link to={link} className=' text-sm  font-thin flex justify-center items-center gap-3 hover:text-green-400' ><span className=' hover:underline underline-offset-4 '>View Porject</span> <FaArrowRightLong/> </Link>
             </div>
         </div>
 
