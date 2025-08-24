@@ -20,7 +20,7 @@ function ProjectCard({no,projectName,description,link}) {
                 <p className='text-sm md:text-2xl font-light hover:text-green-500 leading-6'>{description}</p>
             </div>
             <div className='w-1/3'>
-                <Link to={link} className=' text-xs md:text-sm  font-thin flex justify-center items-center gap-3 hover:text-green-400' ><span className=' hover:underline underline-offset-4 '>View Porject</span> <FaArrowRightLong/> </Link>
+                <Link to={link} className=' text-xs md:text-sm  font-thin flex justify-center items-center gap-3 hover:text-green-400' ><span className=' hover:underline underline-offset-4 '>View Project</span> <FaArrowRightLong/> </Link>
             </div>
         </div>
 
