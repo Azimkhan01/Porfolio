@@ -8,8 +8,11 @@ gsap.registerPlugin(ScrollTrigger);
 function ProjectAlProject() {
 
   const img = [
+                
                 "/project/botanix.png",
+                '/project/zeenath.png',
                 "/project/HomeQuest.png",
+                "/project/neurorevive360.png",
                 "/project/GymManagement.png",
                 "/project/StudentManagement.png",
                 "/project/dashboard.png",
@@ -21,8 +24,10 @@ function ProjectAlProject() {
   const projLink = 
   [
     {isLink:true,link:"https://botanixnatural.com"},
+    {isLink:true,link:"https://zeenath.vercel.app"},
     {isLink:true,link:"https://github.com/Azimkhan01/HomeQuest"},
-    {isLink:true,link:"https://github.com/Azimkhan01/GYM-MANAGEMENT-SYSTEM"},
+    {isLink:true,link:"https://neuro-revive360.vercel.app"},
+    {isLink:true,link:"https://gym-management-docs.vercel.app"},
     {isLink:true,link:"https://github.com/Azimkhan01/Class-Management"},
     {isLink:false,link:""},
     {isLink:true,link:"https://github.com/Azimkhan01/PRODIGY_FS_04"},
