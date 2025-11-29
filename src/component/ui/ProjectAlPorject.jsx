@@ -13,13 +13,15 @@ function ProjectAlProject() {
                 '/project/zeenath.png',
                 "/project/HomeQuest.png",
                 "/project/neurorevive360.png",
+                "/project/MariyamVilla.png",  
+                "/project/eclerxPicnic.png"  ,         
                 "/project/GymManagement.png",
                 "/project/StudentManagement.png",
                 "/project/dashboard.png",
                 "/project/ChattingApplication.png",
                 "/project/Ecommerce.png",
                 "/project/FlipkartClone.png",
-                "/project/TodoList.png",               
+                "/project/TodoList.png",  
               ]
   const projLink = 
   [
@@ -27,6 +29,8 @@ function ProjectAlProject() {
     {isLink:true,link:"https://zeenath.vercel.app"},
     {isLink:true,link:"https://github.com/Azimkhan01/HomeQuest"},
     {isLink:true,link:"https://neuro-revive360.vercel.app"},
+    {isLink:true,link:"https://mariyam-villa-3-0.vercel.app/"},
+    {isLink:true,link:"https://eclerx-picnic.vercel.app/"},
     {isLink:true,link:"https://gym-management-docs.vercel.app"},
     {isLink:true,link:"https://github.com/Azimkhan01/Class-Management"},
     {isLink:false,link:""},
