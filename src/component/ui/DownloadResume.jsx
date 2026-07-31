@@ -41,7 +41,7 @@ function DownloadResume() {
         <button className="text-white text-sm md:text-sm font-thin border-2 border-gray-500 rounded-lg p-2">
           Download
         </button>
-        <a href="https://drive.google.com/file/d/1kuMOqnZNRJ70fNgLYMXpE-zt9YTFvuCr/view?usp=drive_link">
+        <a href="https://drive.google.com/file/d/1gzRQeKJwQ3W2AchS4FoB7NmKYGyn2NcK/view?usp=sharing">
           <AiOutlineDownload className="text-white text-2xl active:scale-150 hover:scale-150 transition-all ease-linear duration-200" />
         </a>
       </div>

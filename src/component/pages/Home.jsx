@@ -223,16 +223,16 @@ function Home() {
         <div className="text-white text-3xl font-bold p-4 flex flex-col justify-center items-start md:items-center  sticky  top-0  h-screen bg-[#0F1012]">
           <div className=" w-full md:w-5/6 flex flex-col justify-center items-center h-2/3 md:h-2/6 ">
             <div className="flex w-full justify-center gap-2 md:gap-0">
-              <p className=" text-3xl flex justify-center items-center">
-                🎉
+              <p className=" text-3xl flex justify-center items-center">🎉</p>
+              <p className="text-green-300 terxt-5xl md:text-6xl">
+                SUPER POWER
               </p>
-              <p className="text-green-300 terxt-5xl md:text-6xl">SUPER POWER</p>
-              <p className=" text-3xl flex justify-center items-center">
-                🎉
-              </p>
+              <p className=" text-3xl flex justify-center items-center">🎉</p>
             </div>
             <div>
-              <p className="text-sm text-gray-300 font-semibold pt-2 uppercase underline underline-offset-4 transition-all ease-initial saturate-100 hover:decoration-green-400">Which i have</p>
+              <p className="text-sm text-gray-300 font-semibold pt-2 uppercase underline underline-offset-4 transition-all ease-initial saturate-100 hover:decoration-green-400">
+                Which i have
+              </p>
             </div>
             <div className="w-full mt-10 flex justify-center items-center">
               <p className=" text-2xl md:text-4xl font-normal text-center">
