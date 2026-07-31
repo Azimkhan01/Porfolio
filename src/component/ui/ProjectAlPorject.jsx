@@ -8,7 +8,7 @@ gsap.registerPlugin(ScrollTrigger);
 function ProjectAlProject() {
 
   const img = [
-                
+                "/project/herbsbiotics.png",
                 "/project/botanix.png",
                 '/project/zeenath.png',
                 "/project/HomeQuest.png",
@@ -25,6 +25,7 @@ function ProjectAlProject() {
               ]
   const projLink = 
   [
+    {isLink:true,link:"https://herbsbiotics.com"},
     {isLink:true,link:"https://botanixnatural.com"},
     {isLink:true,link:"https://zeenath.vercel.app"},
     {isLink:true,link:"https://github.com/Azimkhan01/HomeQuest"},
